@@ -4,7 +4,7 @@ from automation import type_letter, newTab
 def handle_command(action, text):
 
     if action == "start":
-        newTab(text)
+        return newTab(text)
 
     elif action == "continue":
         type_letter("B")

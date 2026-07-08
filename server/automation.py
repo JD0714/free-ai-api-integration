@@ -1,4 +1,5 @@
 import pyautogui
+import pyperclip
 import time
 
 
@@ -25,6 +26,10 @@ def new_tab(input):
     time.sleep(8)
 
     clickLowest("images\copy_button.PNG")
+
+    time.sleep(0.5)
+
+    return pyperclip.paste()
 
 def clickLowest(image):
     matches = list(pyautogui.locateAllOnScreen(
