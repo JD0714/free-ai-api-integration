@@ -2,3 +2,5 @@ fastapi
 uvicorn
 pyautogui
 pyperclip
+Pillow
+opencv-python

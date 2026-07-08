@@ -1,10 +1,10 @@
-from automation import type_letter, newTab
+from automation import type_letter, new_tab
 
 
 def handle_command(action, text):
 
     if action == "start":
-        return newTab(text)
+        return new_tab(text)
 
     elif action == "continue":
         type_letter("B")

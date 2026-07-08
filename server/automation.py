@@ -9,23 +9,24 @@ def type_letter(letter):
 
 def new_tab(input):
     pyautogui.press("win")
-    pyautogui.write("google chrome")
     time.sleep(0.5)
+    pyautogui.write("chrome")
+    time.sleep(1)
     pyautogui.press("right")
-    time.sleep(0.5)
+    time.sleep(1)
     pyautogui.press("enter")
     time.sleep(1.5)
 
     pyautogui.write("http://chatgpt.com")
     pyautogui.press("enter")
-    time.sleep(1.5)
+    time.sleep(3)
 
     pyautogui.write(input)
     time.sleep(0.5)
     pyautogui.press("enter")
     time.sleep(8)
 
-    clickLowest("images\copy_button.PNG")
+    clickLowest(r"images\copy_button.png")
 
     time.sleep(0.5)
 
@@ -34,7 +35,7 @@ def new_tab(input):
 def clickLowest(image):
     matches = list(pyautogui.locateAllOnScreen(
         image,
-        confidence=0.9
+        confidence=0.5
     ))
 
     if not matches:
