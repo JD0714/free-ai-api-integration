@@ -6,34 +6,37 @@ def type_letter(letter):
 
     pyautogui.write(letter)
 
-def newTab(input):
-    time.sleep(3)
+def new_tab(input):
     pyautogui.press("win")
     pyautogui.write("google chrome")
-    time.sleep(1)
-
-    pyautogui.press("up")
-    time.sleep(1)
+    time.sleep(0.5)
     pyautogui.press("right")
-    time.sleep(1)
+    time.sleep(0.5)
     pyautogui.press("enter")
-    time.sleep(1)
+    time.sleep(1.5)
 
-    pyautogui.press("right")
-    time.sleep(1)
-    pyautogui.press("down")
-    time.sleep(1)
-    pyautogui.press("enter")
-    time.sleep(1)
-
-    pyautogui.hotkey("alt", "tab")
-    time.sleep(1)
     pyautogui.write("http://chatgpt.com")
-    time.sleep(1)
     pyautogui.press("enter")
-    time.sleep(1)
+    time.sleep(1.5)
 
     pyautogui.write(input)
-    time.sleep(1)
+    time.sleep(0.5)
     pyautogui.press("enter")
-    time.sleep(1)
+    time.sleep(8)
+
+    clickLowest("images\copy_button.PNG")
+
+def clickLowest(image):
+    matches = list(pyautogui.locateAllOnScreen(
+        image,
+        confidence=0.9
+    ))
+
+    if not matches:
+        return "Images not found"
+
+    lowest = max(matches, key=lambda box: box.top)
+
+    pyautogui.click(pyautogui.center(lowest))
+
+    return "Clicked lowest"
