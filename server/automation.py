@@ -28,7 +28,7 @@ def doStart(input):
     pyautogui.press("enter")
     time.sleep(10)
 
-    clickLowest(r"images\copy_button.png")
+    clickLowest(r"free-ai-api-integration\server\images\copy_button.PNG")
 
     time.sleep(0.5)
 
@@ -40,7 +40,7 @@ def doContinue(input):
     pyautogui.press("enter")
     time.sleep(10)
 
-    clickLowest(r"images\copy_button.png")
+    clickLowest(r"free-ai-api-integration\server\images\copy_button.PNG")
 
     time.sleep(0.5)
 
