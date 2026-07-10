@@ -4,13 +4,20 @@ import time
 
 def doStart(input):
     pyautogui.press("win")
-    time.sleep(0.5)
+    time.sleep(2)
     pyautogui.write("chrome")
+    time.sleep(1)
+    pyautogui.press("up")
     time.sleep(1)
     pyautogui.press("right")
     time.sleep(1)
     pyautogui.press("enter")
-    time.sleep(1.5)
+    time.sleep(1)
+
+    pyautogui.press("right")
+    time.sleep(1)
+    pyautogui.press("enter")
+    time.sleep(5)
 
     pyautogui.write("http://chatgpt.com")
     pyautogui.press("enter")
