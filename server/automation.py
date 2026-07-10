@@ -2,12 +2,7 @@ import pyautogui
 import pyperclip
 import time
 
-
-def type_letter(letter):
-
-    pyautogui.write(letter)
-
-def new_tab(input):
+def doStart(input):
     pyautogui.press("win")
     time.sleep(0.5)
     pyautogui.write("chrome")
@@ -24,13 +19,29 @@ def new_tab(input):
     pyautogui.write(input)
     time.sleep(0.5)
     pyautogui.press("enter")
-    time.sleep(8)
+    time.sleep(10)
 
     clickLowest(r"images\copy_button.png")
 
     time.sleep(0.5)
 
     return pyperclip.paste()
+
+def doContinue(input):
+    pyautogui.write(input)
+    time.sleep(0.5)
+    pyautogui.press("enter")
+    time.sleep(10)
+
+    clickLowest(r"images\copy_button.png")
+
+    time.sleep(0.5)
+
+    return pyperclip.paste()
+
+def doEnd():
+    pyautogui.hotkey('ctrl', 'w')
+    return "Command executed"
 
 def clickLowest(image):
     matches = list(pyautogui.locateAllOnScreen(

@@ -1,18 +1,16 @@
-from automation import type_letter, new_tab
+from automation import doStart, doContinue, doEnd
 
 
 def handle_command(action, text):
 
     if action == "start":
-        return new_tab(text)
+        return doStart(text)
 
-    elif action == "continue":
-        type_letter("B")
+    elif action == "continue": 
+        return doContinue(text)
 
     elif action == "end":
-        type_letter("C")
+        return doEnd()
 
     else:
         return "Invalid command"
-
-    return "Command executed"
