@@ -67,6 +67,14 @@ SERVER_PORT=8000
 
 ---
 
+### 4. Troubleshooting
+
+If the automation does not work correctly, you may need to modify `automation.py` to match your system configuration.
+
+Different operating systems and browser setups can launch applications in different ways, so the commands used to open a web browser may need to be adjusted for your computer.
+
+By default, the automation is configured to use ChatGPT in a web browser. If you use a different browser, have a custom browser installation, or want to automate a different AI service, update the logic in `automation.py`.
+
 ## Backend
 
 TODO
