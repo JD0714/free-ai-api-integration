@@ -1,4 +1,4 @@
-[[[FYI - This project was made before I found out about headless browsers so I definitely can make this much more efficient and plan to when I need to use it]]]
+# [FYI - This project was made before I found out about headless browsers so I definitely can make this much more efficient and plan to when I need to use it]
 # Remote Automation Server
 
 ## Brief
